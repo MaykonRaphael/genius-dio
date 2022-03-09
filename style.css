@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+}
+.container {
+    background-color: #333;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background-image: url('bg.jpg');
+    background-size: cover;
+    background-position: center;
+}
+.score {
+    font-size: 40px;
+    color: #F8F8F8;
+}
+.game {
+    display: grid;
+    grid-template-areas: 
+        'green-area red-area'
+        'yellow-area blue-area'
+    ;
+    gap: 10px;
+    height: 600px;
+    width: 600px;
+    border-radius: 50%;
+    background-color: #666;
+}
+.btn-blue {
+    grid-area: blue-area;
+    background-color: #00F;
+    border-bottom-right-radius: 100%;
+}
+.btn-yellow {
+    grid-area: yellow-area;
+    background-color: #FF0;
+    border-bottom-left-radius: 100%;
+}
+.btn-red {
+    grid-area: red-area;
+    background-color: #F00;
+    border-top-right-radius: 100%;
+}
+.btn-green {
+    grid-area: green-area;
+    background-color: #0F0;
+    border-top-left-radius: 100%;
+}
+.selected {
+    opacity: .5;
+}
+
+
+.welcome-modal {
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('bg.jpg');
+    background-size: cover;
+    background-position: center;
+}
+.modal-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(0, 0, 0, 0.6);
+    width: 100%;
+    height: 100%;
+}
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 710px;
+    width: 100%;
+    height: 300px;
+    font-size: 50px;
+    background: rgba(255,255,255, 0.1);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-radius: 10px;
+    color: #F7F7F7;
+}
+.buttons-area {
+    display: flex;
+    gap: 20px;
+}
+.button:first-child {
+    display: none;
+    background-color: rgb(155, 0, 0);
+}
+.button:first-child:hover {
+    background-color: rgb(196, 0, 0);
+}
+.button {
+    background-color: rgb(1, 145, 1);
+    font-size: 30px;
+    padding: 10px 35px;
+    border-radius: 10px;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+.button:hover {
+    background-color: rgb(0, 172, 0);
+}
